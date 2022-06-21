@@ -1,8 +1,8 @@
 # exert-playwright
 
 ```bash
-# 安装
-pip install playwright
+# 安装 （指定了清华的镜像，指定镜像可能会拉到的版本不是最新）
+pip install playwright -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 # 安装浏览器驱动
 playwright install

@@ -18,10 +18,12 @@ var context = await browser.NewContextAsync(new BrowserNewContextOptions
 });
 var page = await context.NewPageAsync();
 await page.GotoAsync(target);
-//await page.RunAndWaitForNavigationAsync(async () =>
-//{
-//    await Task.CompletedTask;
-//});
+
+// 等待导航事件（地址改变）
+await page.RunAndWaitForNavigationAsync(async () =>
+{
+    await Task.CompletedTask;
+});
 //await page.ScreenshotAsync(new PageScreenshotOptions
 //{
 //    Path = "screenshot.png",
