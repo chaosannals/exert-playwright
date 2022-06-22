@@ -1,5 +1,7 @@
 # exert-playwright
 
+注： Playwright 的 await 无法取消，直接关闭页面会抛出异常。不过问题不大，一般此种情况就是要关闭程序了。顶多一条日志，这可能是为什么现在官方没有提供处理这个问题的解决方案。
+
 ```bash
 # 安装 （指定了清华的镜像，指定镜像可能会拉到的版本不是最新）
 pip install playwright -i https://pypi.tuna.tsinghua.edu.cn/simple
